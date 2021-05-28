@@ -42,7 +42,7 @@ ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
     "yatube.tk",
-    "www.yatube.tk",
+    "e-comitet.ru",
     "0",
 ]
 
