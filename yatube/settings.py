@@ -38,12 +38,8 @@ SECRET_KEY = env('SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "130.193.57.95",
     "localhost",
-    "127.0.0.1",
-    "yatube.tk",
     "e-comitet.ru",
-    "0",
 ]
 
 
@@ -102,7 +98,14 @@ WSGI_APPLICATION = 'yatube.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default': env.db()
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'myprojectjino',
+        'USER': 'myprojectuserjino',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
 }
 
 
@@ -143,7 +146,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = "/static/"
-
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 MEDIA_URL = "/media/"
